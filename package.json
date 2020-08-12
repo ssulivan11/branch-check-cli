@@ -1,0 +1,32 @@
+{
+  "name": "branch-check-cli",
+  "version": "1.0.0",
+  "description": "Validate your branch naming strategy.",
+  "main": "public/index.js",
+  "scripts": {
+    "start": "tsc",
+    "valid": "ts-node src/index.ts -d 'master' && ts-node src/index.ts -m '*'",
+    "invalid": "ts-node src/index.ts -d 'foobar/' && ts-node src/index.ts -m '*.*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssulivan11/branch-check-cli.git"
+  },
+  "author": "Scott Sullivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssulivan11/branch-check-cli/issues"
+  },
+  "homepage": "https://github.com/ssulivan11/branch-check-cli#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "chalk": "^4.1.0",
+    "commander": "^6.0.0",
+    "findup-sync": "^4.0.0",
+    "git-branch": "^2.0.1",
+    "shelljs": "^0.8.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "wildcard-match": "^4.0.0"
+  }
+}
