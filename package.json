@@ -4,7 +4,8 @@
   "description": "Validate your branch naming strategy.",
   "main": "public/index.js",
   "scripts": {
-    "prepublishOnly": "tsc",
+    "compile": "tsc",
+    "prepublishOnly": "npm run compile",
     "test:valid": "ts-node src/index.ts -d 'feature/ bug/ master' && ts-node src/index.ts -m '*'",
     "invalid": "ts-node src/index.ts -d 'foobar/' && ts-node src/index.ts -m '*.*'"
   },
