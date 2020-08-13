@@ -1,12 +1,17 @@
 {
   "name": "branch-check-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Validate your branch naming strategy.",
   "main": "public/index.js",
   "scripts": {
-    "start": "tsc",
-    "valid": "ts-node src/index.ts -d 'master' && ts-node src/index.ts -m '*'",
+    "prepublishOnly": "tsc",
+    "test:valid": "ts-node src/index.ts -d 'feature/ bug/ master' && ts-node src/index.ts -m '*'",
     "invalid": "ts-node src/index.ts -d 'foobar/' && ts-node src/index.ts -m '*.*'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:valid"
+    }
   },
   "repository": {
     "type": "git",
@@ -24,6 +29,7 @@
     "commander": "^6.0.0",
     "findup-sync": "^4.0.0",
     "git-branch": "^2.0.1",
+    "husky": "^4.2.5",
     "shelljs": "^0.8.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7",
