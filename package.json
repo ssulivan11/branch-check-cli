@@ -8,13 +8,14 @@
   },
   "scripts": {
     "compile": "tsc",
-    "prepublishOnly": "npm run compile",
-    "test:valid": "ts-node src/index.ts -d 'feature/ bug/ master' && ts-node src/index.ts -m '*'",
-    "invalid": "ts-node src/index.ts -d 'foobar/' && ts-node src/index.ts -m '*.*'"
+    "branch-check": "ts-node src/index.ts",
+    "test": "ts-node src/index.ts -d 'feature/ bug/ master' && ts-node src/index.ts -m '*'",
+    "test:fail": "ts-node src/index.ts -d 'foobar/' && ts-node src/index.ts -m '*.*'",
+    "prepublishOnly": "npm run compile"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:valid"
+      "pre-commit": "npm run test"
     }
   },
   "repository": {

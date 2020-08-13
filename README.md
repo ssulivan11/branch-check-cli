@@ -8,6 +8,8 @@ First install the package:
 npm install branch-check-cli --save-dev
 ```
 
+![](https://i.imgur.com/vamTvC0.png)
+
 ## Usage
 
 This package script contains a couple different ways to define what is considered a valid branch name. Also feel free to use the shorthands defined in, `branch-check" --help`
