@@ -10,17 +10,16 @@ npm install branch-check-cli --save-dev
 
 ## Usage
 
-This package script contains a couple different ways to define what is considered a valid branch name. Also feel free to use the shorthands defined in, `branch-check-cli --help`
+This package script contains a couple different ways to define what is considered a valid branch name. Also feel free to use the shorthands defined in, `branch-check" --help`
 
 1. **Regex Fuzzy Matching**
 
-    ```json
-    $ branch-check-cli --match 'refactor/ feature/ bug/'
-    ```
+   ```json
+   $ branch-check" --match 'refactor/ feature/ bug/'
+   ```
 
 2. **Directory Matching**
 
-    ```json
-    $ branch-check-cli --dir '*/*'
-    ```
-
+   ```json
+   $ branch-check" --dir '*/*'
+   ```

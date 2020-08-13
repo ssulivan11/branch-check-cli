@@ -1,9 +1,8 @@
 const shell = require("shelljs");
 const chalk = require("chalk");
 const wcm = require("wildcard-match");
-import getBranch from "./getBranch";
-
 const { Command } = require("commander");
+const getBranch = require("./getBranch");
 const program = new Command();
 
 program

@@ -34,4 +34,4 @@ const gitHeadPath = (cwd: string) => {
 getBranch.sync = (cwd: string) =>
   parseBranch(fs.readFileSync(gitHeadPath(cwd)));
 
-export default getBranch;
+module.exports = getBranch;
