@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const shell = require("shelljs");
 const chalk = require("chalk");
 const wcm = require("wildcard-match");
