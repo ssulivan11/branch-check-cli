@@ -4,9 +4,9 @@ const find = require("findup-sync");
 const readFile = util.promisify(fs.readFile);
 
 const getBranch = (
-  cwd,
+  cwd: any,
   callback?: (n: string, response: {}) => void
-): string => {
+): any => {
   if (typeof cwd === "function") {
     callback = cwd;
     cwd = null;
@@ -15,8 +15,7 @@ const getBranch = (
     parseBranch(buf)
   );
   if (typeof callback === "function") {
-    promise.then((res) => callback(null, res)).catch(callback);
-    return;
+    promise.then((res: {}) => callback && callback("", res)).catch(callback);
   }
   return promise;
 };
