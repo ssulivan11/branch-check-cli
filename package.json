@@ -1,6 +1,6 @@
 {
   "name": "branch-check-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Validate your branch naming strategy.",
   "main": "public/index.js",
   "scripts": {
