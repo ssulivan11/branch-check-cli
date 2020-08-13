@@ -27,16 +27,18 @@
     "url": "https://github.com/ssulivan11/branch-check-cli/issues"
   },
   "homepage": "https://github.com/ssulivan11/branch-check-cli#readme",
-  "devDependencies": {
-    "@types/node": "^14.0.27",
+  "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.0.0",
     "findup-sync": "^4.0.0",
     "git-branch": "^2.0.1",
-    "husky": "^4.2.5",
     "shelljs": "^0.8.4",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.7",
     "wildcard-match": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "husky": "^4.2.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   }
 }
