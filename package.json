@@ -2,7 +2,7 @@
   "name": "branch-check-cli",
   "version": "0.0.2",
   "description": "Validate your branch naming strategy.",
-  "main": "public/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
