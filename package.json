@@ -3,6 +3,9 @@
   "version": "0.0.3",
   "description": "Validate your branch naming strategy.",
   "main": "dist/index.js",
+  "bin": {
+    "branch-check": "dist/index.js"
+  },
   "scripts": {
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
