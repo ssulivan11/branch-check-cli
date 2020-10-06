@@ -4,12 +4,12 @@ const find = require("findup-sync");
 const readFile = util.promisify(fs.readFile);
 
 const getBranch = (
-  cwd: any,
+  cwd: string,
   callback?: (n: string, response: {}) => void
-): any => {
+): () => void => {
   if (typeof cwd === "function") {
     callback = cwd;
-    cwd = null;
+    cwd = "";
   }
   const promise = readFile(gitHeadPath(cwd)).then((buf: string) =>
     parseBranch(buf)
