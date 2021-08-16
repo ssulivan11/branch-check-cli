@@ -6,7 +6,7 @@ const readFile = util.promisify(fs.readFile);
 const getBranch = (
   cwd: string,
   callback?: (n: string, response: {}) => void
-): () => void => {
+): (() => void) => {
   if (typeof cwd === "function") {
     callback = cwd;
     cwd = "";
