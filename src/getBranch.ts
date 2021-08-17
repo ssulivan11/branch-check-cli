@@ -4,10 +4,11 @@ const find = require("findup-sync");
 const readFile = util.promisify(fs.readFile);
 
 const getBranch = (
-  cwd: string,
+  cwd: string | ((err: string, branchName: string) => void),
   callback?: (n: string, response: {}) => void
 ): (() => void) => {
   if (typeof cwd === "function") {
+    //@ts-ignore swap callback if cwd is a function
     callback = cwd;
     cwd = "";
   }
