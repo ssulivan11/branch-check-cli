@@ -35,7 +35,7 @@
     "chalk": "^4.1.0",
     "commander": "^6.0.0",
     "findup-sync": "^4.0.0",
-    "git-branch": "^2.0.1",
+    "git-branch": "^1.0.0",
     "shelljs": "^0.8.4",
     "wildcard-match": "^4.0.0"
   },
